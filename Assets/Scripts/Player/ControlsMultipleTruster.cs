@@ -26,30 +26,23 @@ public class ControlsMultipleTruster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetInput(frontKey))
-        if (Input.GetKey(frontKey))
-        {
-           gameObject.GetComponent<Rigidbody>().AddForceAtPosition(-frontTruster.forward, frontTruster.position);
+        if (Input.GetButton("TrusterNorth")){
+            gameObject.GetComponent<Rigidbody>().AddForceAtPosition(-northTruster.forward, northTruster.position);
         }
-        if (Input.GetKey(backKey))
-        {
-           gameObject.GetComponent<Rigidbody>().AddForceAtPosition(-backTruster.forward, backTruster.position);
+        if (Input.GetButton("TrusterSouth")){
+            gameObject.GetComponent<Rigidbody>().AddForceAtPosition(-southTruster.forward, southTruster.position);
         }
-        if (Input.GetKey(northKey))
-        {
-           gameObject.GetComponent<Rigidbody>().AddForceAtPosition(-northTruster.forward, northTruster.position);
+        if (Input.GetButton("TrusterEast")){
+            gameObject.GetComponent<Rigidbody>().AddForceAtPosition(-eastTruster.forward, eastTruster.position);
         }
-        if (Input.GetKey(southKey))
-        {
-           gameObject.GetComponent<Rigidbody>().AddForceAtPosition(-southTruster.forward, southTruster.position);
+        if (Input.GetButton("TrusterWest")){
+            gameObject.GetComponent<Rigidbody>().AddForceAtPosition(-westTruster.forward, westTruster.position);
         }
-        if (Input.GetKey(eastKey))
-        {
-           gameObject.GetComponent<Rigidbody>().AddForceAtPosition(-eastTruster.forward, eastTruster.position);
+        if (Input.GetButton("TrusterFront")){
+            gameObject.GetComponent<Rigidbody>().AddForceAtPosition(-frontTruster.forward, frontTruster.position);
         }
-        if (Input.GetKey(westKey))
-        {
-           gameObject.GetComponent<Rigidbody>().AddForceAtPosition(-westTruster.forward, westTruster.position);
+        if (Input.GetButton("TrusterBack")){
+            gameObject.GetComponent<Rigidbody>().AddForceAtPosition(-backTruster.forward, backTruster.position);
         }
     }
 }
