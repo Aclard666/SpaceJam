@@ -12,7 +12,6 @@ public class GameManager
         if(gameManager == null)
         {
             gameManager = new GameManager();
-
         }
         return gameManager;
     }
